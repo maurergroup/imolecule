@@ -8,9 +8,9 @@ from fractions import gcd
 from functools import reduce
 
 try:
-    import pybel
-    ob = pybel.ob
-    table = ob.OBElementTable()
+    from openbabel import pybel
+    from openbabel import openbabel as ob
+    table = ob
     has_ob = True
 except ImportError:
     has_ob = False
